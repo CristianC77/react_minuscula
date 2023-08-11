@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function ConsultarPresent({ dataUpdated }) {
+function ConsultarCate({ dataUpdated }) {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -8,7 +8,7 @@ function ConsultarPresent({ dataUpdated }) {
     }, [dataUpdated]); // Agregar dataUpdated como dependencia
 
     const fetchData = () => {
-        fetch('http://localhost/api_php/api.php?apicall=readpresentacion')
+        fetch('http://localhost/api_php/api.php?apicall=readcategoria')
             .then(response => response.json())
             .then(data => setData(data.contenido))
             .catch(error => console.log(error));
@@ -16,13 +16,13 @@ function ConsultarPresent({ dataUpdated }) {
 
     return (
         <div className="consultar-container">
-            <h2>Presentaciones:</h2>
+            <h2>Categorias</h2>
             <ul>
                 {Array.isArray(data) ? (
                     data.map(item => (
-                        <li key={item.id_presentacion}>
-                            <p>Id presentación: {item.id_presentacion}</p>
-                            <p>Nombre de la presentación: {item.nom_presentacion}</p>
+                        <li key={item.id_categoria}>
+                            <p>No categoria: {item.id_categoria}</p>
+                            <p>Nombre de la categoria: {item.tipo_categoria}</p>
                         </li>
                     ))
                 ) : (
@@ -36,4 +36,4 @@ function ConsultarPresent({ dataUpdated }) {
     
 }
 
-export default ConsultarPresent;
+export default ConsultarCate;
