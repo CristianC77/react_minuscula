@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Estilos mejorados y vibrantes para los botones */
+button {
+  padding: 10px 20px;
+  background-color: #f94144;
+  color: #f9c74f;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #e76f51;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #d62828;
+}
+
+/* Estilos específicos para cada tipo de botón */
+button[type="submit"] {
+  background-color: #24e01d;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #112d31;
+}
+
+button[type="submit"]:active {
+  background-color: #3b63e7;
+}

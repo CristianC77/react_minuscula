@@ -1,0 +1,88 @@
+/* Estilos mejorados y vibrantes para la aplicación sin cambiar el código */
+.App {
+  text-align: center;
+  background-color: #f9c74f;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Cambiar el color del campo de entrada (input) */
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f2e5a1;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.App-logo {
+  width: 100px;
+  height: 100px;
+  animation: App-logo-spin infinite 10s linear, bounceLogo 2s infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 10s linear, bounceLogo 2s infinite;
+  }
+}
+
+.App-header {
+  background-color: #f94144;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  color: #f9c74f;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-out;
+}
+
+.App-link {
+  color: #2a9d8f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.App-link:hover {
+  color: #e76f51;
+}
+
+/* Animación de rotación y rebote del logotipo */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounceLogo {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Animación de entrada para el encabezado */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
